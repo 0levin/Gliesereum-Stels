@@ -46,7 +46,7 @@
 .text_info {
     border-radius: 8px;
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(0.5px);
     padding: 64px 80px;
     z-index: 1;
     display: flex;
@@ -85,14 +85,14 @@
 .img_info__photo {
     position: relative;
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(0.5px);
     z-index: 10;
 }
 
 .img_info__card {
     border-radius: 8px;
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(0.5px);
     padding: 32px 40px;
     max-width: 570px;
     position: absolute;
@@ -142,7 +142,7 @@
     padding: 64px 80px;
     border-radius: 8px;
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(0.5px);
     display: flex;
     flex-direction: row;
     align-items: flex-end;

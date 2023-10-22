@@ -54,7 +54,7 @@
 .grid__content_item {
     border-radius: 8px;
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(0.5px);
     padding: 40px 24px;
     display: flex;
     flex-direction: column;
@@ -110,7 +110,7 @@
 .vs__table {
     border-radius: 8px;
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(0.5px);
 }
 
 .vs_table_row {
@@ -177,8 +177,8 @@
     .vs_table_row {
         border-radius: 8px;
         background: var(--surface-30, rgba(30, 31, 32, 0.30));
-        -webkit-backdrop-filter: blur(1.5px);
-        backdrop-filter: blur(1.5px);
+        -webkit-backdrop-filter: blur(0.5px);
+        backdrop-filter: blur(0.5px);
         border-bottom: none;
         flex-direction: column;
         gap: 40px;
