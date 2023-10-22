@@ -76,20 +76,23 @@ export const About = () => {
                 <div className={styles.bg2}>
                     <img src={bg2} alt="bg" />
                 </div>
-                <div>
-                    <Text data={[
-                        { text: "Ready to experience the future? ", accent: true },
-                    ]}
-                        type={textTypes.BlockTitle}
-                    />
-                    <Text data={[
-                        { text: "Become a part of the Gliesereum community. Explore our products, engage with our team, and witness the future of market management and yield generation." }
-                    ]}
-                        classes={[styles.text_info_re]}
-                        type={textTypes.medium}
-                    />
+                <div className={styles.last_text_block_content}>
+                    <div>
+                        <Text data={[
+                            { text: "Ready to experience the future? ", accent: true },
+                        ]}
+                            type={textTypes.BlockTitle}
+                        />
+                        <Text data={[
+                            { text: "Become a part of the Gliesereum community. Explore our products, engage with our team, and witness the future of market management and yield generation." }
+                        ]}
+                            classes={[styles.text_info_re]}
+                            type={textTypes.medium}
+                        />
+                    </div>
+                    <Btn text={"get access"} type="link" action="https://web.stels.app/" classes={[styles.last_text_block_btn]} />
+
                 </div>
-                <Btn text={"get access"} classes={[styles.last_text_block_btn]} />
             </section>
         </div>
     )

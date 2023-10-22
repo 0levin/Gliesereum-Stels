@@ -35,22 +35,22 @@ export const Header = () => {
                             </a>
                         </li>
                         <li className={classNames([styles.nav_link_y, "hover"])}>
-                            <a href="#ai-systems" >
+                            <a href="/#ai_systems" >
                                 <Text data={[{ text: "AI-systems" }]} type={textTypes.regularDark} />
                             </a>
                         </li>
                         <li className={classNames([styles.nav_link_y, "hover"])}>
-                            <a href="#ecosystem" >
+                            <a href="/#ecosystem" >
                                 <Text data={[{ text: "Ecosystem" }]} type={textTypes.regularDark} />
                             </a>
                         </li>
                         <li className={classNames([styles.nav_link_y, "hover"])}>
-                            <a href="#media" >
+                            <a href="/#media" >
                                 <Text data={[{ text: "Media" }]} type={textTypes.regularDark} />
                             </a>
                         </li>
                         <li className={classNames([styles.nav_link_y, "hover"])}>
-                            <a href="#faq" >
+                            <a href="/#faq" >
                                 <Text data={[{ text: "FAQ" }]} type={textTypes.regularDark} />
                             </a>
                         </li>

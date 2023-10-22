@@ -79,6 +79,7 @@ button {
 .section {
     margin-top: 200px;
     max-width: 100%;
+    scroll-margin-top: 50px;
 }
 
 .block_title {

@@ -1,8 +1,9 @@
 import { Text, textTypes } from "../../shared/Text/Text";
 import { Btn } from "../../shared/Btn/Btn";
 import styles from "./home.module.css";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaqItem } from "./FaqItem/FaqItem";
 
 import starsIcon from "../assets/stars-icon.svg";
 import bg from "../assets/bg-1.svg";
@@ -23,21 +24,9 @@ import walletIcon from "./assets/013-wallet.svg";
 import bitcoinIcon from "./assets/bitcoin-icon.svg";
 import atomIcon from "./assets/003-atom.svg";
 import graphIcon from "./assets/graph-icon.svg";
-import { FaqItem } from "./FaqItem/FaqItem";
 import arrowIconActive from "./assets/selected-indicator-active.svg";
 import blur from "../assets/blur.svg";
 import logoIcon from "./assets/logo-icon.svg";
-
-import aiIcon from "./assets/ai.svg";
-import liquidityIcon from "./assets/liquidity.svg";
-import marketDataIcon from "./assets/market-data.svg";
-import customerIcon from "./assets/customer.svg";
-import toolsIcon from "./assets/tools.svg";
-import dataIcon from "./assets/data.svg";
-import strategyIcon from "./assets/strategy.svg";
-import botIcon from "./assets/bot.svg";
-import withdrawalIcon from "./assets/withdrawal.svg";
-
 
 const solutions = [
     {
@@ -45,15 +34,15 @@ const solutions = [
         title: "For projects with own tokens",
         info: [
             {
-                icon: aiIcon,
+                icon: blockchainIcon,
                 text: "Benefit from our market-making service build on AI-powered automated systems"
             },
             {
-                icon: liquidityIcon,
+                icon: bitcoinIcon,
                 text: "Attract liquidity from your customers to scale your market and grow"
             },
             {
-                icon: marketDataIcon,
+                icon: networkIcon,
                 text: "Have access to RAW market data, aggregated from all sources for ease of analysis"
             }
         ]
@@ -63,34 +52,34 @@ const solutions = [
         title: "For exchanges and market-makers",
         info: [
             {
-                icon: customerIcon,
-                text: "Attract new customers, provide efficient services for your clients and grow their capital"
+                icon: blockchainIcon,
+                text: "Benefit from our market-making service build on AI-powered automated systems"
             },
             {
-                icon: toolsIcon,
-                text: "Enjoy professional market-tested tools and cut the expenses with automated systems"
+                icon: bitcoinIcon,
+                text: "Attract liquidity from your customers to scale your market and grow"
             },
             {
-                icon: dataIcon,
-                text: "Be efficient, agile and well-informed by having data, prediction models and execution strategies in one place."
+                icon: networkIcon,
+                text: "Have access to RAW market data, aggregated from all sources for ease of analysisn"
             }
         ]
     },
     {
         id: 3,
-        title: "For private Investors and Individuals",
+        title: "For private Investors and Individual",
         info: [
             {
-                icon: strategyIcon,
-                text: "Use your capital in low-risk market-making strategies with no IL"
+                icon: blockchainIcon,
+                text: "Benefit from our market-making service build on AI-powered automated systems"
             },
             {
-                icon: botIcon,
-                text: "Maximize returns with our specialized arbitrage and spread bots"
+                icon: bitcoinIcon,
+                text: "Attract liquidity from your customers to scale your market and grow"
             },
             {
-                icon: withdrawalIcon,
-                text: "Maintain full control of your assets, benefiting from compounded rewards and flexible withdrawals"
+                icon: networkIcon,
+                text: "Have access to RAW market data, aggregated from all sources for ease of analysis"
             }
         ]
     }
@@ -98,6 +87,24 @@ const solutions = [
 
 export const Home = () => {
     const [openedSolution, setOpenedSolution] = useState(1);
+
+    const anchors = {
+        solutions: useRef(),
+        ai_systems: useRef(),
+        ecosystem: useRef(),
+        media: useRef(),
+        faq: useRef(),
+    }
+
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            setTimeout(() => {
+                anchors[hash.slice(1)]?.current?.scrollIntoView()
+            }, 500)
+        }
+    }, [])
 
     const solutionSlideWidth = window.innerWidth < 1200 ?
         window.innerWidth < 768 ?
@@ -124,7 +131,7 @@ export const Home = () => {
                 <Text text={"Capital and market management. Automated."} classes={[styles.intro__subtext]} />
                 <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
             </section>
-            <section className={classNames(["section", styles.info_f])} id={"solutions"}>
+            <section className={classNames(["section", styles.info_f])} id={"solutions"} ref={anchors.solutions}>
                 <div>
                     <Text
                         data={[{ text: "Tailored solutions " }, { text: "for your needs", accent: true }]}
@@ -195,7 +202,7 @@ export const Home = () => {
                 }
 
             </section>
-            <section className={classNames(["section"])} id={"ai-systems"}>
+            <section className={classNames(["section"])} id={"ai_systems"} ref={anchors.ai_systems}>
                 <div className="block_title">
                     <Text
                         data={[{ text: "Automated ", accent: true }, { text: "systems" }]}
@@ -223,7 +230,7 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className={classNames(["section", styles.ecosystem])} id={"ecosystem"}>
+            <section className={classNames(["section", styles.ecosystem])} id={"ecosystem"} ref={anchors.ecosystem}>
                 <div className={styles.bg2}>
                     <img src={bg2Blur} alt="bg" />
                 </div>
@@ -295,7 +302,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className={classNames(["section", styles.media])} id={"media"}>
+            <section className={classNames(["section", styles.media])} id={"media"} ref={anchors.media}>
                 <div className={styles.bg3}>
                     <img src={bg3Blur} alt="bg" />
                 </div>
@@ -375,7 +382,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="section" id={"faq"}>
+            <section className="section" id={"faq"} ref={anchors.faq}>
                 <div className="block_title">
                     <Text text={"FAQ"} type={textTypes.BlockTitle} />
                 </div>
@@ -386,19 +393,19 @@ export const Home = () => {
                     />
                     <FaqItem
                         title={"How does the BotBox system enhance my market-making capabilities?"}
-                        text={"The BotBox system allows users to curate a unique trio of bots from a selection of 10 distinct options. This specialized combination is designed for collaborative efficiency and leverages pooled liquidity. With the integration of neuronic analysis in our AI-prefix bots, users can make informed decisions and navigate market intricacies with enhanced precision."}
+                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
                     />
                     <FaqItem
                         title={"How does the Graph token integrate with Stels and what benefits does it offer?"}
-                        text={"The Graph token serves as a membership key to unlock Stels' full range of features and automation systems. Built on the reliable Gliesereum blockchain, this exclusive token not only grants premium access but also ensures seamless integration within our ecosystem. Users can easily monitor and manage their Graph tokens through the Gliesereum wallet, experiencing efficiency and transparency in every transaction."}
+                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
                     />
                     <FaqItem
                         title={"What assurances does Stels provide for individual investors?"}
-                        text={"For individual investors, capital return and security are paramount. Stels offers a platform where they can maintain uninterrupted control over their funds, which always remain on the exchange. By granting access to advanced algorithms, Stels ensures maximized returns while also mitigating risks, including concerns of impermanent loss."}
+                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
                     />
                     <FaqItem
                         title={"How does Stels cater to projects with their distinct tokens?"}
-                        text={"Projects with their own tokens often require sophisticated market-making services. Stels provides enhanced control over the market-making process, cost-effective solutions, and access to the best algorithmic strategies in the marketplace. This ensures tailored and precise market-making aligned with the unique goals of each project."}
+                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
                     />
                 </div>
             </section>

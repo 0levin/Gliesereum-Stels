@@ -56,7 +56,7 @@ export const Market = () => {
                                 type={textTypes.regularDark}
                             />
                         </div>
-                        <Btn text={"Learn more about platform"} classes={[styles.grid__content_btn]} />
+                        <Btn type="link" action="https://web.stels.app/ " text={"Learn more about platform"} classes={[styles.grid__content_btn]} />
                     </div>
                 </div>
             </section>
