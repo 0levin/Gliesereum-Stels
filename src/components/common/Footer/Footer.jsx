@@ -13,7 +13,7 @@ export const Footer = () => {
             <img src={blur} alt="blur" className={styles.blur} />
             <div className={classNames("container", styles.content)}>
                 <div className={styles.part}>
-                    <Text data={[{ text: "by Gliesereum (c) 2023" }]} type={textTypes.regularDark} />
+                    <Text data={[{ text: "Gliesereum © 2023" }]} type={textTypes.regularDark} />
                 </div>
                 <div className={styles.part}>
                     <ul className={styles.links_list}>
