@@ -3,6 +3,7 @@
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
     backdrop-filter: blur(0.5px);
     margin-top: 260px;
+    position: relative;
 }
 
 .content {
