@@ -132,7 +132,7 @@
 .info_f__list_item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 32px;
     max-width: 400px;
 }
 
@@ -438,5 +438,9 @@
 
     .solutions_slider {
         width: calc(100vw - 80px);
+    }
+
+    .info_f__list_item {
+        gap: 24px;
     }
 }

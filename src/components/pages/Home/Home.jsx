@@ -28,21 +28,32 @@ import arrowIconActive from "./assets/selected-indicator-active.svg";
 import blur from "../assets/blur.svg";
 import logoIcon from "./assets/logo-icon.svg";
 
+import aiIcon from "./assets/ai.svg";
+import liquidityIcon from "./assets/liquidity.svg";
+import marketDataIcon from "./assets/market-data.svg";
+import customerIcon from "./assets/customer.svg";
+import toolsIcon from "./assets/tools.svg";
+import dataIcon from "./assets/data.svg";
+import strategyIcon from "./assets/strategy.svg";
+import botIcon from "./assets/bot.svg";
+import withdrawalIcon from "./assets/withdrawal.svg";
+
+
 const solutions = [
     {
         id: 1,
         title: "For projects with own tokens",
         info: [
             {
-                icon: blockchainIcon,
+                icon: aiIcon,
                 text: "Benefit from our market-making service build on AI-powered automated systems"
             },
             {
-                icon: bitcoinIcon,
+                icon: liquidityIcon,
                 text: "Attract liquidity from your customers to scale your market and grow"
             },
             {
-                icon: networkIcon,
+                icon: marketDataIcon,
                 text: "Have access to RAW market data, aggregated from all sources for ease of analysis"
             }
         ]
@@ -52,16 +63,16 @@ const solutions = [
         title: "For exchanges and market-makers",
         info: [
             {
-                icon: blockchainIcon,
-                text: "Benefit from our market-making service build on AI-powered automated systems"
+                icon: customerIcon,
+                text: "Attract new customers, provide efficient services for your clients and grow their capital"
             },
             {
-                icon: bitcoinIcon,
-                text: "Attract liquidity from your customers to scale your market and grow"
+                icon: toolsIcon,
+                text: "Enjoy professional market-tested tools and cut the expenses with automated systems"
             },
             {
-                icon: networkIcon,
-                text: "Have access to RAW market data, aggregated from all sources for ease of analysisn"
+                icon: dataIcon,
+                text: "Be efficient, agile and well-informed by having data, prediction models and execution strategies in one place."
             }
         ]
     },
@@ -70,16 +81,16 @@ const solutions = [
         title: "For private Investors and Individual",
         info: [
             {
-                icon: blockchainIcon,
-                text: "Benefit from our market-making service build on AI-powered automated systems"
+                icon: strategyIcon,
+                text: "Use your capital in low-risk market-making strategies with no IL"
             },
             {
-                icon: bitcoinIcon,
-                text: "Attract liquidity from your customers to scale your market and grow"
+                icon: botIcon,
+                text: "Maximize returns with our specialized arbitrage and spread bots"
             },
             {
-                icon: networkIcon,
-                text: "Have access to RAW market data, aggregated from all sources for ease of analysis"
+                icon: withdrawalIcon,
+                text: "Maintain full control of your assets, benefiting from compounded rewards and flexible withdrawals"
             }
         ]
     }
@@ -375,19 +386,19 @@ export const Home = () => {
                     />
                     <FaqItem
                         title={"How does the BotBox system enhance my market-making capabilities?"}
-                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
+                        text={"The BotBox system allows users to curate a unique trio of bots from a selection of 10 distinct options. This specialized combination is designed for collaborative efficiency and leverages pooled liquidity. With the integration of neuronic analysis in our AI-prefix bots, users can make informed decisions and navigate market intricacies with enhanced precision."}
                     />
                     <FaqItem
                         title={"How does the Graph token integrate with Stels and what benefits does it offer?"}
-                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
+                        text={"The Graph token serves as a membership key to unlock Stels' full range of features and automation systems. Built on the reliable Gliesereum blockchain, this exclusive token not only grants premium access but also ensures seamless integration within our ecosystem. Users can easily monitor and manage their Graph tokens through the Gliesereum wallet, experiencing efficiency and transparency in every transaction."}
                     />
                     <FaqItem
                         title={"What assurances does Stels provide for individual investors?"}
-                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
+                        text={"For individual investors, capital return and security are paramount. Stels offers a platform where they can maintain uninterrupted control over their funds, which always remain on the exchange. By granting access to advanced algorithms, Stels ensures maximized returns while also mitigating risks, including concerns of impermanent loss."}
                     />
                     <FaqItem
                         title={"How does Stels cater to projects with their distinct tokens?"}
-                        text={"Stels is a cutting-edge platform designed to redefine market management and yield generation. By offering advanced AI-powered automation and algorithmic strategies, Stels empowers both projects with their own tokens and individual investors to maximize efficiency, returns, and control in the dynamic world of digital finance."}
+                        text={"Projects with their own tokens often require sophisticated market-making services. Stels provides enhanced control over the market-making process, cost-effective solutions, and access to the best algorithmic strategies in the marketplace. This ensures tailored and precise market-making aligned with the unique goals of each project."}
                     />
                 </div>
             </section>
