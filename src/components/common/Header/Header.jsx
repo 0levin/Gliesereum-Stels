@@ -27,33 +27,61 @@ export const Header = () => {
                     <Link to="/" className={classNames([styles.logo, "hover"])}>
                         <img src={logo} alt="logo" />
                     </Link>
+
                     <ul className={styles.links_list}>
-                        <li className={classNames([styles.nav_link, "hover"])}>
-                            <Link to="/market" >
-                                <Text data={[{ text: "Market challenges" }]} type={textTypes.regular} />
-                            </Link>
+                        <li className={classNames([styles.nav_link_y, "hover"])}>
+                            <a href="/#solutions" >
+                                <Text data={[{ text: "Solutions" }]} type={textTypes.regularDark} />
+                            </a>
                         </li>
-                        <li className={classNames([styles.nav_link, "hover"])}>
-                            <Link to="/about" >
-                                <Text data={[{ text: "About us" }]} type={textTypes.regular} />
-                            </Link>
+                        <li className={classNames([styles.nav_link_y, "hover"])}>
+                            <a href="#ai-systems" >
+                                <Text data={[{ text: "AI-systems" }]} type={textTypes.regularDark} />
+                            </a>
+                        </li>
+                        <li className={classNames([styles.nav_link_y, "hover"])}>
+                            <a href="#ecosystem" >
+                                <Text data={[{ text: "Ecosystem" }]} type={textTypes.regularDark} />
+                            </a>
+                        </li>
+                        <li className={classNames([styles.nav_link_y, "hover"])}>
+                            <a href="#media" >
+                                <Text data={[{ text: "Media" }]} type={textTypes.regularDark} />
+                            </a>
+                        </li>
+                        <li className={classNames([styles.nav_link_y, "hover"])}>
+                            <a href="#faq" >
+                                <Text data={[{ text: "FAQ" }]} type={textTypes.regularDark} />
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div className={styles.part}>
+                    <ul className={classNames([styles.links_list])}>
+                        <li className={classNames([styles.nav_link, "hover"])}>
+                            <Link to="/market" >
+                                <Text data={[{ text: "Features" }]} type={textTypes.regularDark} />
+                            </Link>
+                        </li>
+                        <li className={classNames([styles.nav_link, "hover"])}>
+                            <Link to="/about" >
+                                <Text data={[{ text: "About us" }]} type={textTypes.regularDark} />
+                            </Link>
+                        </li>
+                    </ul>
                     <ul className={styles.links_list}>
                         <li>
-                            <Link className={classNames([styles.social_link, "hover"])}>
+                            <Link to="https://github.com/gliesereumlab/web.stels.app" target="_blank" className={classNames([styles.social_link, "hover"])}>
                                 <img src={ghIcon} alt="GitHub" />
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link className={classNames([styles.social_link, "hover"])}>
                                 <img src={tgIcon} alt="Telegram" />
                             </Link>
-                        </li>
+                        </li> */}
                         {
-                            window.innerWidth < 768 &&
+                            window.innerWidth <= 980 &&
                             <li>
                                 <div onClick={() => setMenuOpen(!menuOpen)} className={classNames([styles.menu_btn])} >
                                     <img src={menuOpen ? closeIcon : menuIcon} alt="" />
@@ -62,7 +90,7 @@ export const Header = () => {
                                     <ul className={styles.menu_list}>
                                         <li className={classNames([styles.menu_item])}>
                                             <Link to="/market" >
-                                                <Text data={[{ text: "Market challenges" }]} type={textTypes.regular} />
+                                                <Text data={[{ text: "Features" }]} type={textTypes.regular} />
                                             </Link>
                                         </li>
                                         <li className={classNames([styles.menu_item])}>

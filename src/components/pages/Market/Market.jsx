@@ -21,7 +21,7 @@ export const Market = () => {
             <section className={classNames([styles.intro])}>
                 <div className={styles.intro__title}>
                     <div className={styles.intro__text_row}>
-                        <Text data={[{ text: "Market " }, { text: "challenges", accent: true }]} type={textTypes.PageTitle} />
+                        <Text data={[{ text: "Platform " }, { text: "features", accent: true }]} type={textTypes.PageTitle} />
                     </div>
                 </div>
                 <Text text={"We've crafted an ecosystem that empowers projects, market-makers and individual investors, granting them tools for unprecedented market control and efficiency in liquidity management."}

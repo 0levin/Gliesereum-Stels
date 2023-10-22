@@ -47,14 +47,14 @@
 .grid__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 270px);
-    gap: 40px;
+    grid-template-rows: repeat(4, 300px);
+    gap: 20px;
 }
 
 .grid__content_item {
     border-radius: 8px;
     background: var(--surface-30, rgba(30, 31, 32, 0.30));
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(1.5px);
     padding: 40px 24px;
     display: flex;
     flex-direction: column;
@@ -216,7 +216,7 @@
     .grid__content_item:nth-child(n) {
         grid-row: auto;
         grid-column: auto;
-        height: 200px;
+        height: 240px;
     }
 
     .grid__content_item:nth-child(2) {

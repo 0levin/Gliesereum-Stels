@@ -2,16 +2,17 @@ import { Text, textTypes } from "../../shared/Text/Text";
 import { Btn } from "../../shared/Btn/Btn";
 import styles from "./home.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import starsIcon from "../assets/stars-icon.svg";
 import bg from "../assets/bg-1.svg";
 import bg2 from "../assets/bg-2.svg";
+import bg3Blur from "./assets/bg-3.svg";
 import bg2Blur from "../assets/bg-2-blur.svg";
 import classNames from "classnames";
 import arrowIcon from "../../assets/selected-indicator.svg";
 
 import blockchainIcon from "../assets/014-blockchain.svg";
-import usersIcon from "../assets/106-user.svg";
 import networkIcon from "../assets/078-network.svg";
 
 import info2Icon1 from "./assets/illustration.svg";
@@ -19,11 +20,13 @@ import info2Icon2 from "./assets/illustration2.svg";
 
 import blockchain2Icon from "./assets/015-blockchain.svg";
 import walletIcon from "./assets/013-wallet.svg";
-import bitcoinIcon from "./assets/017-bitcoin.svg";
+import bitcoinIcon from "./assets/bitcoin-icon.svg";
 import atomIcon from "./assets/003-atom.svg";
+import graphIcon from "./assets/graph-icon.svg";
 import { FaqItem } from "./FaqItem/FaqItem";
 import arrowIconActive from "./assets/selected-indicator-active.svg";
 import blur from "../assets/blur.svg";
+import logoIcon from "./assets/logo-icon.svg";
 
 const solutions = [
     {
@@ -35,7 +38,7 @@ const solutions = [
                 text: "Benefit from our market-making service build on AI-powered automated systems"
             },
             {
-                icon: usersIcon,
+                icon: bitcoinIcon,
                 text: "Attract liquidity from your customers to scale your market and grow"
             },
             {
@@ -46,14 +49,14 @@ const solutions = [
     },
     {
         id: 2,
-        title: "For market-makers and agents",
+        title: "For exchanges and market-makers",
         info: [
             {
                 icon: blockchainIcon,
                 text: "Benefit from our market-making service build on AI-powered automated systems"
             },
             {
-                icon: usersIcon,
+                icon: bitcoinIcon,
                 text: "Attract liquidity from your customers to scale your market and grow"
             },
             {
@@ -71,7 +74,7 @@ const solutions = [
                 text: "Benefit from our market-making service build on AI-powered automated systems"
             },
             {
-                icon: usersIcon,
+                icon: bitcoinIcon,
                 text: "Attract liquidity from your customers to scale your market and grow"
             },
             {
@@ -103,14 +106,14 @@ export const Home = () => {
                     <img src={blur} alt="blur" className={classNames([styles.intro_blur])} />
                     <div className={styles.intro__text_row}>
                         <Text data={[{ text: "Stels ", accent: true }, { text: "by" }]} type={textTypes.PageTitle} />
-                        <img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])} />
+                        {/* <img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])} /> */}
                     </div>
                     <Text text={"Gliesereum"} type={textTypes.PageTitle} />
                 </div>
                 <Text text={"Capital and market management. Automated."} classes={[styles.intro__subtext]} />
-                <Btn text={"Try now"} className={styles.intro__btn} />
+                <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
             </section>
-            <section className={classNames(["section", styles.info_f])}>
+            <section className={classNames(["section", styles.info_f])} id={"solutions"}>
                 <div>
                     <Text
                         data={[{ text: "Tailored solutions " }, { text: "for your needs", accent: true }]}
@@ -181,7 +184,7 @@ export const Home = () => {
                 }
 
             </section>
-            <section className={classNames(["section"])}>
+            <section className={classNames(["section"])} id={"ai-systems"}>
                 <div className="block_title">
                     <Text
                         data={[{ text: "Automated ", accent: true }, { text: "systems" }]}
@@ -209,7 +212,7 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className={classNames(["section", styles.ecosystem])}>
+            <section className={classNames(["section", styles.ecosystem])} id={"ecosystem"}>
                 <div className={styles.bg2}>
                     <img src={bg2Blur} alt="bg" />
                 </div>
@@ -221,42 +224,147 @@ export const Home = () => {
                 </div>
                 <div className={styles.info_fi__content_grid}>
                     <div className={styles.info_fi__content_item}>
-                        <img src={blockchain2Icon} alt="icon" />
+                        <Link to="https://gliesereum.com/" target="_blank">
+                            <img src={logoIcon} alt="icon" />
+                        </Link>
                         <div>
                             <Text text={"Gliesereum сross-chain blockchain"} type={textTypes.TextTitle} />
                             <Text text={"Dive into a blockchain network that transcends boundaries. Our cross-chain technology ensures fluidity, security, and efficiency, bridging various blockchain environments for seamless transactions and interactions."} type={textTypes.regularDark} />
                         </div>
                     </div>
                     <div className={styles.info_fi__content_item}>
-                        <img src={walletIcon} alt="icon" />
+                        <Link to="https://github.com/gliesereumlab/wallet" target="_blank">
+                            <img src={walletIcon} alt="icon" />
+                        </Link>
                         <div>
                             <Text text={"Gliesereum wallet"} type={textTypes.TextTitle} />
                             <Text text={"Your gateway to the Gliesereum universe. Experience a safe, user-friendly, and intuitive wallet designed to manage, transfer, and store your assets with unparalleled ease."} type={textTypes.regularDark} />
                         </div>
                     </div>
                     <div className={styles.info_fi__content_item}>
-                        <img src={bitcoinIcon} alt="icon" />
+                        <Link target="_blank" to="https://web.stels.app/" >
+                            <img src={graphIcon} alt="icon" />
+
+                        </Link>
                         <div>
                             <Text text={"Stels by Gliesereum Web 3.0"} type={textTypes.TextTitle} />
-                            <Text text={"The next frontier in web evolution. Embrace a decentralized, user-centric web environment, offering transparency, control, and an enhanced user experience. We innovate and bring new ways of secure data transfer and authorization."} type={textTypes.regularDark} />
+                            <Text text={"The next frontier in web evolution. Embrace a decentralized, user-centric web environment, offering transparency, control, and an enhanced user experience. We innovate and bring new ways of secure data transfer and market maintenance."} type={textTypes.regularDark} />
                         </div>
                     </div>
                     <div className={styles.info_fi__content_item}>
-                        <img src={atomIcon} alt="icon" />
+                        <Link target="_blank" to="https://github.com/gliesereumlab/web.stels.app" >
+                            <img src={atomIcon} alt="icon" />
+
+                        </Link>
                         <div>
                             <Text text={"AI-powered automation system — Botbox"} type={textTypes.TextTitle} />
                             <Text text={"Automation reimagined. With Botbox, tap into the prowess of advanced AI algorithms, automating market processes and yield generation to optimize profitability and efficiency."} type={textTypes.regularDark} />
                         </div>
                     </div>
-                    <div className={styles.info_fi__content_item}>
-                        <div className={styles.info_fi__content_bottom_text}>
-                            <Text text={"Unlock the full potential of Stels software and access an expansive suite of AI-automation systems"} type={textTypes.medium} />
-                            <Btn text={"get access"} />
-                        </div>
+                </div>
+            </section>
+
+            <section className="section">
+                <div className={styles.unlock_block}>
+                    <div>
+                        <Text
+                            data={[
+                                {
+                                    text: "Unlock "
+                                },
+                                {
+                                    text: "the full potential",
+                                    accent: true,
+                                }
+                            ]}
+                            type={textTypes.BlockTitle} />
+                        <Text text={"of Stels software and access an expansive suite of AI automation systems"} type={textTypes.medium} classes={[styles.unlock_block_text]} />
+                    </div>
+                    <Btn type="link" action="https://web.stels.app/" text={"get access"} classes={[styles.unlock_block_btn]} />
+                </div>
+            </section>
+
+            <section className={classNames(["section", styles.media])} id={"media"}>
+                <div className={styles.bg3}>
+                    <img src={bg3Blur} alt="bg" />
+                </div>
+                <div className="block_title">
+                    <Text
+                        data={[{ text: "Press " }, { text: "about us", accent: true }]}
+                        type={textTypes.BlockTitle}
+                    />
+                </div>
+                <div className={styles.about_cards}>
+                    <div className={styles.about_card}>
+                        <Text text={"Binance square"} classes={[styles.about_card_text]} />
+                        <a href="/" className={classNames(["hover", styles.about_card_link])} >
+                            <Text
+                                data={[{
+                                    text: "read the article",
+                                    accent: true,
+                                }]}
+                            />
+                        </a>
+                    </div>
+                    <div className={styles.about_card}>
+                        <Text text={"KIKO"} classes={[styles.about_card_text]} />
+                        <a href="/" className={classNames(["hover", styles.about_card_link])} >
+                            <Text
+                                data={[{
+                                    text: "read the article",
+                                    accent: true,
+                                }]}
+                            />
+                        </a>
+                    </div>
+                    <div className={styles.about_card}>
+                        <Text text={"Coin market cap"} classes={[styles.about_card_text]} />
+                        <a href="/" className={classNames(["hover", styles.about_card_link])} >
+                            <Text
+                                data={[{
+                                    text: "read the article",
+                                    accent: true,
+                                }]}
+                            />
+                        </a>
+                    </div>
+                    <div className={styles.about_card}>
+                        <Text text={"Min Max"} classes={[styles.about_card_text]} />
+                        <a href="/" className={classNames(["hover", styles.about_card_link])} >
+                            <Text
+                                data={[{
+                                    text: "read the article",
+                                    accent: true,
+                                }]}
+                            />
+                        </a>
+                    </div>
+                    <div className={styles.about_card}>
+                        <Text text={"One news page"} classes={[styles.about_card_text]} />
+                        <a href="/" className={classNames(["hover", styles.about_card_link])} >
+                            <Text
+                                data={[{
+                                    text: "read the article",
+                                    accent: true,
+                                }]}
+                            />
+                        </a>
+                    </div>
+                    <div className={styles.about_card}>
+                        <Text text={"Traiding view"} classes={[styles.about_card_text]} />
+                        <a href="/" className={classNames(["hover", styles.about_card_link])} >
+                            <Text
+                                data={[{
+                                    text: "read the article",
+                                    accent: true,
+                                }]}
+                            />
+                        </a>
                     </div>
                 </div>
             </section>
-            <section className="section">
+
+            <section className="section" id={"faq"}>
                 <div className="block_title">
                     <Text text={"FAQ"} type={textTypes.BlockTitle} />
                 </div>
