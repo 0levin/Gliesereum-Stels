@@ -78,7 +78,7 @@ const solutions = [
     },
     {
         id: 3,
-        title: "For private Investors and Individual",
+        title: "For private Investors and Individuals",
         info: [
             {
                 icon: strategyIcon,
