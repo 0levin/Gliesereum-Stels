@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 // import tgIcon from "../assets/Telegram_white.svg";
 import ghIcon from "../assets/Github_white.svg";
-import blur from "./assets/blur-3.svg";
+import blur from "./assets/blur-3.png";
 
 export const Footer = () => {
     return (

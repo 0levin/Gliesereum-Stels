@@ -8,8 +8,8 @@ import { FaqItem } from "./FaqItem/FaqItem";
 import starsIcon from "../assets/stars-icon.svg";
 import bg from "../assets/bg-1.svg";
 import bg2 from "../assets/bg-2.svg";
-import bg3Blur from "./assets/bg-3.svg";
-import bg2Blur from "../assets/bg-2-blur.svg";
+import bg3Blur from "./assets/bg-3.png";
+import bg2Blur from "../assets/bg-2-blur.png";
 import classNames from "classnames";
 import arrowIcon from "../../assets/selected-indicator.svg";
 
@@ -25,7 +25,7 @@ import bitcoinIcon from "./assets/bitcoin-icon.svg";
 import atomIcon from "./assets/003-atom.svg";
 import graphIcon from "./assets/graph-icon.svg";
 import arrowIconActive from "./assets/selected-indicator-active.svg";
-import blur from "../assets/blur.svg";
+import blur from "../assets/blur.png";
 import logoIcon from "./assets/logo-icon.svg";
 
 import aiIcon from "./assets/ai.svg";
