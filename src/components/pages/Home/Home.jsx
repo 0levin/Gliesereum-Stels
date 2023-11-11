@@ -128,9 +128,12 @@ export const Home = () => {
                         <Text data={[{text: "[ STELS ] ", accent: true}]} type={textTypes.PageTitle}/>
                         {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
                     </div>
-                    <Text classes={['small']} text={"WEB 3.0 by Gliesereum"} type={textTypes.PageTitle}/>
+                    <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle}/>
                 </div>
-                <Text text={"Capital and market management. Automated."} classes={[styles.intro__subtext]}/>
+                <Text
+                    data={[{text: "By "}, {text: "Gliesereum", accent: true}]}
+                    classes={[styles.intro__subtext]}
+                />
                 <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn}/>
             </section>
             <section className={classNames(["section", styles.info_f])} id={"solutions"} ref={anchors.solutions}>
@@ -215,7 +218,7 @@ export const Home = () => {
             <section className={classNames(["section"])} id={"ai_systems"} ref={anchors.ai_systems}>
                 <div className="block_title">
                     <Text
-                        data={[{text: "Automated ", accent: true}, {text: "systems"}]}
+                        data={[{text: "Automation ", accent: true}, {text: "systems"}]}
                         type={textTypes.BlockTitle}
                     />
                     <Text
@@ -251,7 +254,7 @@ export const Home = () => {
                 </div>
                 <div className="block_title">
                     <Text
-                        data={[{text: "Our "}, {text: "ecosystem", accent: true}]}
+                        data={[{text: "Main "}, {text: "blocks", accent: true}]}
                         type={textTypes.BlockTitle}
                     />
                 </div>
@@ -284,9 +287,9 @@ export const Home = () => {
 
                         </Link>
                         <div>
-                            <Text text={"Stels by Gliesereum Web 3.0"} type={textTypes.TextTitle}/>
+                            <Text text={"Stels protocol"} type={textTypes.TextTitle}/>
                             <Text
-                                text={"The next frontier in web evolution. Embrace a decentralized, user-centric web environment, offering transparency, control, and an enhanced user experience. We innovate and bring new ways of secure data transfer and market maintenance."}
+                                text={"The next frontier in web evolution. Embrace a decentralized, encrypted data transfer protocol.  We innovate and bring new ways of secure data transfer and market maintenance, without risks of leaking any sensitive and private data."}
                                 type={textTypes.regularDark}/>
                         </div>
                     </div>
@@ -296,9 +299,9 @@ export const Home = () => {
 
                         </Link>
                         <div>
-                            <Text text={"AI-powered automation system — Botbox"} type={textTypes.TextTitle}/>
+                            <Text text={"AI-powered Automation Systems"} type={textTypes.TextTitle}/>
                             <Text
-                                text={"Automation reimagined. With Botbox, tap into the prowess of advanced AI algorithms, automating market processes and yield generation to optimize profitability and efficiency."}
+                                text={"Automation reimagined. With Stels, tap into the prowess of advanced AI algorithms, automating market processes and yield generation to optimize profitability and efficiency."}
                                 type={textTypes.regularDark}/>
                         </div>
                     </div>
