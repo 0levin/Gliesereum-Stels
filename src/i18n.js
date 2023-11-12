@@ -35,9 +35,8 @@ const resources = {
             "Features": "기능",
             "About us": "회사 소개",
             "About us ": "회사 소개",
-            "[ STELS ]": "[ STELS ]",
+            "[ STELS ]": JSON.stringify([{ text: "[ STELS ] ", accent: true }]),
             "WEB 3.0 by Gliesereum": "글리세움의 WEB 3.0",
-            "Capital and market management. Automated.": "자동화된 자본과 시장관리를 지금 만나보세요",
             "Try now": "지금 사용하기",
             "Tailored solutions for your needs": "고객의 니즈를 따라가는 맞춤형 솔루션",
             "For projects with own tokens": "자체 토큰이 있는 프로젝트를 위한",
@@ -123,7 +122,7 @@ const resources = {
             "Stels protocol": "Stels 규약",
             "By Gliesereum": "글리세움의",
             "Automation systems": "자동화 시스템",
-
+            "Automated capital and market management": "자동화된 자본과 시장관리를 지금 만나보세요",
         }
     },
     cn: {
@@ -136,11 +135,13 @@ const resources = {
             "Features": "平台特色",
             "About us": "关于我们",
             "About us ": "关于我们",
-            "STELS": "STELS",
+            "[ STELS ]": JSON.stringify([{ text: "[ STELS ] ", accent: true }]),
             "Web 3.0 by Gliesereum": "Gliesereum Web 3.0 技术",
-            "Capital and market management. Automated.": "资本与市场管理、自动化",
             "Try now": "现在试试",
             "Tailored solutions for your needs": "根据你的需求制定方案",
+            // "For projects with own tokens": "",
+            // "For exchanges and market-makers": "",
+            // "For private Investors and Individuals": "",
             "Benefit from our market-making service build on AI-powered automated systems": "从我们利用人工智能驱动的做市系统收益",
             "Attract liquidity from your customers to scale your market and grow": "吸引客户的流动性以扩大市场规模并实现增长",
             "Have access to RAW market data, aggregated from all sources for ease of analysis": "可以访问从所有来源汇总的原始市场数据，以便于分析",
@@ -215,7 +216,7 @@ const resources = {
             "Become a part of the Gliesereum community. Explore our products, engage with our team, and witness the future of market management and yield generation.": "成为Gliesereum社区的一员 探索我们的产品，与我们的团队互动，并见证市场管理和收益生成的未来",
             "Stels protocol": "Stels 协议",
             "Main blocks": "主要区块",
-            "By Gliesereum": "Gliesereum 技术",
+            "By Gliesereum": JSON.stringify([{ text: "Gliesereum ", accent: true }, { text: "技术" }]),
             "Automated capital and market management": "自动化资本和市场管理",
             // "Automation systems": "自动化系统"
         }
