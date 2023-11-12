@@ -17,12 +17,12 @@ const languages = [
         label: "EN"
     },
     {
-        value: "cn",
-        label: "CN"
-    },
-    {
         value: "kr",
         label: "KR"
+    },
+    {
+        value: "cn",
+        label: "CN"
     }
 ]
 
