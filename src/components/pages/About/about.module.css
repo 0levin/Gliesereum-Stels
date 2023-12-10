@@ -61,7 +61,8 @@
 }
 
 .text_info_title {
-    color: var(--black-100)
+    color: var(--black-100);
+    width: auto;
 }
 
 .text_info__reg_text {
@@ -222,7 +223,7 @@
     }
 
     .text_info__reg_text {
-        margin: 48px 0 16px;
+        margin: 48px auto 16px;
     }
 
     .text_info_re {

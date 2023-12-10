@@ -11,12 +11,13 @@ import bg3Blur from "./assets/bg-3.svg";
 import bg2Blur from "../assets/bg-2-blur.svg";
 import classNames from "classnames";
 import arrowIcon from "../../assets/selected-indicator.svg";
+//import videoHeader from "./assets/vid18.mp4"
 
 import info2Icon1 from "./assets/illustration.svg";
 import info2Icon2 from "./assets/illustration2.svg";
-import walletIcon from "./assets/013-wallet.svg";
+import walletIcon from "./assets/wallet.svg";
 import atomIcon from "./assets/003-atom.svg";
-import graphIcon from "./assets/graph-icon.svg";
+import netIcon from "./assets/net.svg";
 import arrowIconActive from "./assets/selected-indicator-active.svg";
 import blur from "../assets/blur.svg";
 import logoIcon from "./assets/logo-icon.svg";
@@ -120,8 +121,12 @@ export const Home = () => {
         <div className="container">
             <div className={classNames([styles.intro_bg_wrapper])}>
                 <img src={bg} alt="bg" className={styles.bg1} />
+                {/* <video className={classNames([styles.intro_video])} autoplay="true" loop="true" muted="true">
+                    <source src={bg} type="video/mp4"/>
+                    Your browser does not support the video tag. Please update your browser.
+                </video> */}
             </div>
-            <section className={classNames([styles.intro])}>
+            <section className={classNames([styles.intro, styles.info_f])}>
                 <div className={styles.intro__title}>
                     <img src={blur} alt="blur" className={classNames([styles.intro_blur])} />
                     <div className={styles.intro__text_row}>
@@ -283,7 +288,7 @@ export const Home = () => {
                     </div>
                     <div className={styles.info_fi__content_item}>
                         <Link target="_blank" to="https://web.stels.app/">
-                            <img src={graphIcon} alt="icon" />
+                            <img src={netIcon} alt="icon" />
 
                         </Link>
                         <div>
@@ -295,7 +300,7 @@ export const Home = () => {
                     </div>
                     <div className={styles.info_fi__content_item}>
                         <Link target="_blank" to="https://github.com/gliesereumlab/web.stels.app">
-                            <img src={atomIcon} alt="icon" />
+                            <img src={aiIcon} alt="icon" />
 
                         </Link>
                         <div>

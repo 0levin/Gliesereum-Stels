@@ -5,10 +5,10 @@ import classNames from "classnames";
 
 import bg from "./assets/bg1.svg";
 
-import currencyIcon from "./assets/037-currency.svg";
-import atomIcon from "./assets/003-atom.svg";
-import networkIcon from "./assets/078-network.svg";
-import bitcoinIcon from "./assets/059-bitcoin.svg";
+import piechartIcon from "./assets/piechart.svg";
+import aiIcon from "./assets/ai.svg";
+import dashboardIcon from "./assets/dashboard.svg";
+import netIcon from "./assets/net.svg";
 import gridImage from "./assets/grid-image.png";
 import swords from "./assets/swords.svg";
 
@@ -33,7 +33,7 @@ export const Market = () => {
             <section className={classNames(["section", styles.grid])}>
                 <div className={classNames([styles.grid__content])}>
                     <div className={classNames([styles.grid__content_item])}>
-                        <img src={currencyIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
+                        <img src={piechartIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
                         <Text text={"Market-making and Yield generation"} type={textTypes.TextTitle} />
                     </div>
                     <div className={classNames([styles.grid__content_item])}>
@@ -41,15 +41,15 @@ export const Market = () => {
                             className={classNames(["image", styles.grid__image])} />
                     </div>
                     <div className={classNames([styles.grid__content_item])}>
-                        <img src={atomIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
+                        <img src={aiIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
                         <Text text={"AI-powered automated system"} type={textTypes.TextTitle} />
                     </div>
                     <div className={classNames([styles.grid__content_item])}>
-                        <img src={networkIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
-                        <Text text={"In-depth analyticsand RAW market data"} type={textTypes.TextTitle} />
+                        <img src={dashboardIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
+                        <Text text={"In-depth analytics and RAW market data"} type={textTypes.TextTitle} />
                     </div>
                     <div className={classNames([styles.grid__content_item])}>
-                        <img src={bitcoinIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
+                        <img src={netIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
                         <Text text={"Liquidity provision marketplace"} type={textTypes.TextTitle} />
                     </div>
                     <div className={classNames([styles.grid__content_item])}>

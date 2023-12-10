@@ -25,11 +25,13 @@ export const About = () => {
             </section>
             <section className={classNames(["section", styles.text_info])}>
                 <img src={logoIcon} alt="logo" className={styles.text_info_logo} />
-                <Text
-                    data={"With over 7 years"}
-                    type={textTypes.TextTitle}
-                    classes={[styles.text_info_title]}
-                />
+                <div>
+                    <Text
+                        data={"With over 7 years"}
+                        type={textTypes.TextTitle}
+                        classes={[styles.text_info_title]}
+                    />
+                </div>
                 <Text
                     classes={[styles.text_info__reg_text]}
                     data={"With over 7 years in top-tier Market-Making, our goal is to change market management for everyone's benefit. We combine the best of blockchain with AI smarts."}
