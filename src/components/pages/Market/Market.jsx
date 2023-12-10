@@ -8,7 +8,7 @@ import bg from "./assets/bg1.svg";
 import piechartIcon from "./assets/piechart.svg";
 import aiIcon from "./assets/ai.svg";
 import dashboardIcon from "./assets/dashboard.svg";
-import netIcon from "./assets/net.svg";
+import liquidityIcon from "./assets/liquidity.svg";
 import gridImage from "./assets/grid-image.png";
 import swords from "./assets/swords.svg";
 
@@ -49,7 +49,7 @@ export const Market = () => {
                         <Text text={"In-depth analytics and RAW market data"} type={textTypes.TextTitle} />
                     </div>
                     <div className={classNames([styles.grid__content_item])}>
-                        <img src={netIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
+                        <img src={liquidityIcon} alt="icon" className={classNames([styles.grid__content_item_img])} />
                         <Text text={"Liquidity provision marketplace"} type={textTypes.TextTitle} />
                     </div>
                     <div className={classNames([styles.grid__content_item])}>
