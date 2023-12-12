@@ -17,7 +17,9 @@
     .bg1 {
         max-height: 100vh;
     }
+}
 
+@media screen and (min-width: 720px) {
     .vs__title_block {
         margin-left: 40px;
     }
