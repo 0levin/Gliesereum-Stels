@@ -8,7 +8,7 @@ const resources = {
     en: {
         translation: {
             "Platform features": JSON.stringify([{ text: "Platform " }, { text: "features", accent: true }]),
-            "Market challenges versus The Stels solutions": JSON.stringify([{ text: "Market challenges versus" }, { text: "The Stels solutions", accent: true }]),
+            "Market challenges versus the Stels solutions": JSON.stringify([{ text: "Market challenges versus the " }, { text: "Stels solutions", accent: true }]),
             "The Stels solutions": JSON.stringify([{ text: "The Stels solutions", accent: true }]),
             "About us": JSON.stringify([{ text: "About ", accent: true }, { text: "us" }]),
             "With over 7 years": JSON.stringify([{ text: "With" }, { text: " " }, { text: "over 7 years", accent: true, }]),

@@ -17,6 +17,10 @@
     .bg1 {
         max-height: 100vh;
     }
+
+    .vs__title_block {
+        margin-left: 40px;
+    }
 }
 
 .intro {

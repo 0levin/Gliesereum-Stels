@@ -78,7 +78,7 @@ export const Market = () => {
                         :
                         <div className="block_title" style={{ "textAlign": "left" }}>
                             <Text
-                                data={"Market challenges versus The Stels solutions"}
+                                data={"Market challenges versus the Stels solutions"}
                                 type={textTypes.BlockTitle}
                             // classes={[styles.vs__title_item]}
                             />
