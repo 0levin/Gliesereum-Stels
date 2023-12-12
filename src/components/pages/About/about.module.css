@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 132px;
+    margin-top: 150px;
 }
 
 .intro__title {
@@ -136,7 +136,7 @@
 
 .text_info_re {
     max-width: 920px;
-    margin-top: 40px;
+    margin-top: 120px;
 }
 
 .last_text_block_content {
