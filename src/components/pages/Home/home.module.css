@@ -28,6 +28,10 @@
     position: relative;
 }
 
+.bg1 {
+    filter: blur(3px)
+}
+
 .bg3 {
     position: absolute;
     top: 0;

@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaqItem } from "./FaqItem/FaqItem";
 
 import starsIcon from "../assets/stars-icon.svg";
-import bg from "../assets/bg-1.svg";
+import bg from "../assets/bg-1.png";
 import bg3Blur from "./assets/bg-3.svg";
 import bg2Blur from "../assets/bg-2-blur.svg";
 import classNames from "classnames";
@@ -126,9 +126,9 @@ export const Home = () => {
                     Your browser does not support the video tag. Please update your browser.
                 </video> */}
             </div>
-            <section className={classNames([styles.intro, styles.info_f])}>
+            <section className={classNames([styles.intro])}>
                 <div className={styles.intro__title}>
-                    <img src={blur} alt="blur" className={classNames([styles.intro_blur])} />
+                    {/* <img src={blur} alt="blur" className={classNames([styles.intro_blur])} /> */}
                     <div className={styles.intro__text_row}>
                         <Text data={"[ STELS ]"} type={textTypes.PageTitle} />
                         {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
