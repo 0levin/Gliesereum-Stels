@@ -314,9 +314,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .intro {
-        margin-top: 80px;
-    }
 
     .info_f {
         flex-direction: column;
@@ -459,8 +456,8 @@
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
     .intro {
-        margin-top: 80px;
+        margin-top: 250px;
     }
 }
