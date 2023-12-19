@@ -232,7 +232,6 @@
 
 .unlock_block_text {
     max-width: 615px;
-    margin-top: 40px;
 }
 
 .unlock_block_btn {
@@ -457,5 +456,11 @@
 
     .info_f__list_item {
         gap: 24px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .intro {
+        margin-top: 80px;
     }
 }
