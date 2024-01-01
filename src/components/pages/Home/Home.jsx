@@ -14,7 +14,7 @@ import arrowIcon from "../../assets/selected-indicator.svg";
 //import videoHeader from "./assets/vid18.mp4"
 
 import info2Icon1 from "./assets/illustration.svg";
-import info2Icon2 from "./assets/illustration2.svg";
+import info2Icon2 from "./assets/illustration_graph.png";
 import walletIcon from "./assets/wallet.svg";
 import atomIcon from "./assets/003-atom.svg";
 import netIcon from "./assets/net.svg";
@@ -235,7 +235,7 @@ export const Home = () => {
                 <div className={styles.info_s__content}>
                     <div className={styles.info_s__content_item}>
                         <img src={info2Icon1} alt="icon" className={styles.info_s__content_img} />
-                        <Text text={"10 specialized bots"} type={textTypes.TextTitle}
+                        <Text text={"12 specialized bots"} type={textTypes.TextTitle}
                             classes={[styles.info_s__content_title]} />
                         <Text
                             text={"Use ready-to-go setup of bots, that are united into Botboxes - teams of specialized AI-algorithms that are combining efforts to maximize the effieciency and perform the ordered task."}
@@ -400,7 +400,7 @@ export const Home = () => {
                     />
                     <FaqItem
                         title={"How does the BotBox system enhance my market-making capabilities?"}
-                        text={"The BotBox system allows users to curate a unique trio of bots from a selection of 10 distinct options. This specialized combination is designed for collaborative efficiency and leverages pooled liquidity. With the integration of neuronic analysis in our AI-prefix bots, users can make informed decisions and navigate market intricacies with enhanced precision."}
+                        text={"The BotBox system allows users to curate a unique trio of bots from a selection of 12 distinct options. This specialized combination is designed for collaborative efficiency and leverages pooled liquidity. With the integration of neuronic analysis in our AI-prefix bots, users can make informed decisions and navigate market intricacies with enhanced precision."}
                     />
                     <FaqItem
                         title={"How does the Graph token integrate with Stels and what benefits does it offer?"}
