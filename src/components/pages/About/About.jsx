@@ -7,6 +7,9 @@ import bg2 from "./assets/bg2.svg";
 import logoIcon from "./assets/logo-icon.svg";
 import { Btn } from "../../shared/Btn/Btn";
 
+import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
+
 export const About = () => {
     return (
         <div className="container">
@@ -16,12 +19,16 @@ export const About = () => {
             <section className={classNames([styles.intro])}>
                 <div className={styles.intro__title}>
                     <div className={styles.intro__text_row}>
-                        <Text data={"About us "} type={textTypes.PageTitle} />
+                        <Fade top>
+                            <Text data={"About us"} type={textTypes.PageTitle} />
+                        </Fade>
                     </div>
                 </div>
-                <Text
-                    data={"We are Gliesereum, the vanguard of next-generation blockchain technology poised to redefine the contours of digital market management."}
-                    classes={[styles.intro__subtext]} />
+                <Fade top>
+                    <Text
+                        data={"We are Gliesereum, the vanguard of next-generation blockchain technology poised to redefine the contours of digital market management."}
+                        classes={[styles.intro__subtext]} />
+                </Fade>
             </section>
             <section className={classNames(["section", styles.text_info])}>
                 <img src={logoIcon} alt="logo" className={styles.text_info_logo} />
@@ -69,19 +76,21 @@ export const About = () => {
                 <div className={styles.bg2}>
                     <img src={bg2} alt="bg" />
                 </div>
-                <div className={styles.last_text_block_content}>
-                    <div>
-                        <Text data={"Ready to experience the future?"}
-                            type={textTypes.BlockTitle}
-                        />
-                        <Text text={"Become a part of the Gliesereum community. Explore our products, engage with our team, and witness the future of market management and yield generation."}
-                            classes={[styles.text_info_re]}
-                            type={textTypes.medium}
-                        />
+                <Fade>
+                    <div className={styles.last_text_block_content}>
+                        <div>
+                            <Text data={"Ready to experience the future?"}
+                                type={textTypes.BlockTitle}
+                            />
+                            <Text text={"Become a part of the Gliesereum community. Explore our products, engage with our team, and witness the future of market management and yield generation."}
+                                classes={[styles.text_info_re]}
+                                type={textTypes.medium}
+                            />
+                        </div>
+                        <Btn text={"get access"} type="link" action="https://web.stels.app/"
+                            classes={[styles.last_text_block_btn]} />
                     </div>
-                    <Btn text={"get access"} type="link" action="https://web.stels.app/"
-                        classes={[styles.last_text_block_btn]} />
-                </div>
+                </Fade>
             </section>
         </div>
     )

@@ -33,6 +33,7 @@ import botIcon from "./assets/bot.svg";
 import withdrawalIcon from "./assets/withdrawal.svg";
 
 import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 
 const solutions = [
     {
@@ -121,7 +122,7 @@ export const Home = () => {
 
     return (
         <div className="container">
-            <div className={classNames([styles.intro_bg_wrapper])}>
+            <div className={classNames([styles.intro_bg_wrapper])} id={"intro"}>
                 <img src={bg} alt="bg" className={styles.bg1} />
                 {/* <video className={classNames([styles.intro_video])} autoplay="true" loop="true" muted="true">
                     <source src={bg} type="video/mp4"/>
@@ -129,21 +130,24 @@ export const Home = () => {
                 </video> */}
             </div>
             <section className={classNames([styles.intro])}>
-                <Fade top>
                     <div className={styles.intro__title}>
                         {/* <img src={blur} alt="blur" className={classNames([styles.intro_blur])} /> */}
-                        <div className={styles.intro__text_row}>
-                                <Text data={"[ STELS ]"} type={textTypes.PageTitle} />
-                                {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
-                        </div>
-                        <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle} />
+                        <Fade top>
+                            <div className={styles.intro__text_row}>
+                                    <Text data={"[ STELS ]"} type={textTypes.PageTitle} />
+                                    {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
+                            </div>
+                        </Fade>
+                        <Fade top>
+                            <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle} />
+                        </Fade>
                     </div>
-                    <Text
-                        data={"By Gliesereum"}
-                        classes={[styles.intro__subtext]}
-                    />
-                    <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
-                </Fade>
+                    <Fade top>
+                        <Text data={"By Gliesereum"} classes={[styles.intro__subtext]}/>
+                    </Fade>
+                    <Fade top>
+                        <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
+                    </Fade>
             </section>
             <section className={classNames(["section", styles.info_f])} id={"solutions"} ref={anchors.solutions}>
                 <div>
@@ -277,10 +281,12 @@ export const Home = () => {
                             <img src={logoIcon} alt="icon" />
                         </Link>
                         <div>
-                            <Text text={"Gliesereum сross-chain blockchain"} type={textTypes.TextTitle} />
-                            <Text
-                                text={"Dive into a blockchain network that transcends boundaries. Our cross-chain technology ensures fluidity, security, and efficiency, bridging various blockchain environments for seamless transactions and interactions."}
-                                type={textTypes.regularDark} />
+                            <Fade top>
+                                <Text text={"Gliesereum сross-chain blockchain"} type={textTypes.TextTitle} />
+                                <Text
+                                    text={"Dive into a blockchain network that transcends boundaries. Our cross-chain technology ensures fluidity, security, and efficiency, bridging various blockchain environments for seamless transactions and interactions."}
+                                    type={textTypes.regularDark} />
+                            </Fade>
                         </div>
                     </div>
                     <div className={styles.info_fi__content_item}>
@@ -288,10 +294,12 @@ export const Home = () => {
                             <img src={walletIcon} alt="icon" />
                         </Link>
                         <div>
+                        <Fade top>
                             <Text text={"Gliesereum wallet"} type={textTypes.TextTitle} />
                             <Text
                                 text={"Your gateway to the Gliesereum universe. Experience a safe, user-friendly, and intuitive wallet designed to manage, transfer, and store your assets with unparalleled ease."}
                                 type={textTypes.regularDark} />
+                            </Fade>
                         </div>
                     </div>
                     <div className={styles.info_fi__content_item}>
@@ -300,10 +308,12 @@ export const Home = () => {
 
                         </Link>
                         <div>
-                            <Text text={"Stels protocol"} type={textTypes.TextTitle} />
-                            <Text
-                                text={"The next frontier in web evolution. Embrace a decentralized, encrypted data transfer protocol. We innovate and bring new ways of secure data transfer and market maintenance, without risks of leaking any sensitive and private data"}
-                                type={textTypes.regularDark} />
+                            <Fade top>
+                                <Text text={"Stels protocol"} type={textTypes.TextTitle} />
+                                <Text
+                                    text={"The next frontier in web evolution. Embrace a decentralized, encrypted data transfer protocol. We innovate and bring new ways of secure data transfer and market maintenance, without risks of leaking any sensitive and private data"}
+                                    type={textTypes.regularDark} />
+                            </Fade>
                         </div>
                     </div>
                     <div className={styles.info_fi__content_item}>
@@ -312,10 +322,12 @@ export const Home = () => {
 
                         </Link>
                         <div>
-                            <Text text={"AI-powered Automation Systems"} type={textTypes.TextTitle} />
-                            <Text
-                                text={"Automation reimagined. With Stels, tap into the prowess of advanced AI algorithms, automating market processes and yield generation to optimize profitability and efficiency."}
-                                type={textTypes.regularDark} />
+                            <Fade top>
+                                <Text text={"AI-powered Automation Systems"} type={textTypes.TextTitle} />
+                                <Text
+                                    text={"Automation reimagined. With Stels, tap into the prowess of advanced AI algorithms, automating market processes and yield generation to optimize profitability and efficiency."}
+                                    type={textTypes.regularDark} />
+                            </Fade>
                         </div>
                     </div>
                 </div>
@@ -346,54 +358,58 @@ export const Home = () => {
                     />
                 </div>
                 <div className={styles.about_cards}>
-                    <div className={styles.about_card}>
-                        <Text text={"Binance square"} classes={[styles.about_card_text]} />
-                        <a target="_blank" href="https://www.binance.com/en/feed/post/1226280?ref=506455821" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
-                            <Text
-                                data={"read the article"}
-                            />
-                        </a>
-                    </div>
-                    <div className={styles.about_card}>
-                        <Text text={"KITKO"} classes={[styles.about_card_text]} />
-                        <a target="_blank" href="https://kitko.com/15-most-promising-web3-startups-that-will-be-on-everyones-lips-in-2024/" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
-                            <Text
-                                data={"read the article"}
-                            />
-                        </a>
-                    </div>
-                    <div className={styles.about_card}>
-                        <Text text={"Coin market cap"} classes={[styles.about_card_text]} />
-                        <a target="_blank" href="https://coinmarketcap.com/headlines/news/15-most-promising-web3-startups-that-will-be-on-everyones-lips-in-2024/" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
-                            <Text
-                                data={"read the article"}
-                            />
-                        </a>
-                    </div>
-                    <div className={styles.about_card}>
-                        <Text text={"Min Max"} classes={[styles.about_card_text]} />
-                        <a target="_blank" href="https://minmax.ai/news/2023-09-15-most-promising-web3-startups-that-will-be-on-everyones-lips-in-2024" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
-                            <Text
-                                data={"read the article"}
-                            />
-                        </a>
-                    </div>
-                    <div className={styles.about_card}>
-                        <Text text={"One news page"} classes={[styles.about_card_text]} />
-                        <a target="_blank" href="https://www.onenewspage.com/n/World/1zpnjb74k6/15-Most-Promising-Web3-Startups-That-Will-Be.htm" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
-                            <Text
-                                data={"read the article"}
-                            />
-                        </a>
-                    </div>
-                    <div className={styles.about_card}>
-                        <Text text={"Traiding view"} classes={[styles.about_card_text]} />
-                        <a target="_blank" href="https://www.tradingview.com/news/cryptodaily:2ac1a3924094b:0-15-most-promising-web3-startups-that-will-be-on-everyone-s-lips-in-2024/" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
-                            <Text
-                                data={"read the article"}
-                            />
-                        </a>
-                    </div>
+                    <Fade top>
+                        <div className={styles.about_card}>
+                            <Text text={"Binance square"} classes={[styles.about_card_text]} />
+                            <a target="_blank" href="https://www.binance.com/en/feed/post/1226280?ref=506455821" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
+                                <Text
+                                    data={"read the article"}
+                                />
+                            </a>
+                        </div>
+                        <div className={styles.about_card}>
+                            <Text text={"KITKO"} classes={[styles.about_card_text]} />
+                            <a target="_blank" href="https://kitko.com/15-most-promising-web3-startups-that-will-be-on-everyones-lips-in-2024/" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
+                                <Text
+                                    data={"read the article"}
+                                />
+                            </a>
+                        </div>
+                        <div className={styles.about_card}>
+                            <Text text={"Coin market cap"} classes={[styles.about_card_text]} />
+                            <a target="_blank" href="https://coinmarketcap.com/headlines/news/15-most-promising-web3-startups-that-will-be-on-everyones-lips-in-2024/" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
+                                <Text
+                                    data={"read the article"}
+                                />
+                            </a>
+                        </div>
+                    </Fade>
+                    <Fade top>
+                        <div className={styles.about_card}>
+                            <Text text={"Min Max"} classes={[styles.about_card_text]} />
+                            <a target="_blank" href="https://minmax.ai/news/2023-09-15-most-promising-web3-startups-that-will-be-on-everyones-lips-in-2024" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
+                                <Text
+                                    data={"read the article"}
+                                />
+                            </a>
+                        </div>
+                        <div className={styles.about_card}>
+                            <Text text={"One news page"} classes={[styles.about_card_text]} />
+                            <a target="_blank" href="https://www.onenewspage.com/n/World/1zpnjb74k6/15-Most-Promising-Web3-Startups-That-Will-Be.htm" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
+                                <Text
+                                    data={"read the article"}
+                                />
+                            </a>
+                        </div>
+                        <div className={styles.about_card}>
+                            <Text text={"Traiding view"} classes={[styles.about_card_text]} />
+                            <a target="_blank" href="https://www.tradingview.com/news/cryptodaily:2ac1a3924094b:0-15-most-promising-web3-startups-that-will-be-on-everyone-s-lips-in-2024/" className={classNames(["hover", styles.about_card_link])} rel="noreferrer">
+                                <Text
+                                    data={"read the article"}
+                                />
+                            </a>
+                        </div>
+                    </Fade>
                 </div>
             </section>
 
