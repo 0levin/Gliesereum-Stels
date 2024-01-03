@@ -130,24 +130,20 @@ export const Home = () => {
                 </video> */}
             </div>
             <section className={classNames([styles.intro])}>
+                <Fade>
                     <div className={styles.intro__title}>
                         {/* <img src={blur} alt="blur" className={classNames([styles.intro_blur])} /> */}
-                        <Fade top>
-                            <div className={styles.intro__text_row}>
-                                    <Text data={"[ STELS ]"} type={textTypes.PageTitle} />
-                                    {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
-                            </div>
-                        </Fade>
-                        <Fade top>
-                            <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle} />
-                        </Fade>
+                        <div className={styles.intro__text_row}>
+                                <Text data={"[ STELS ]"} type={textTypes.PageTitle} />
+                                {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
+                        </div>
+                        <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle} />
                     </div>
-                    <Fade top>
-                        <Text data={"By Gliesereum"} classes={[styles.intro__subtext]}/>
-                    </Fade>
-                    <Fade top>
-                        <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
-                    </Fade>
+                    <Text data={"By Gliesereum"} classes={[styles.intro__subtext]}/>
+                </Fade>
+                <Fade bottom>
+                    <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
+                </Fade>
             </section>
             <section className={classNames(["section", styles.info_f])} id={"solutions"} ref={anchors.solutions}>
                 <div>
@@ -335,15 +331,17 @@ export const Home = () => {
 
             <section className="section">
                 <div className={styles.unlock_block}>
-                    <div>
-                        <Text
-                            data={"Unlock the full potential"}
-                            type={textTypes.BlockTitle} />
-                        <Text text={"of Stels software and access an expansive suite of AI automation systems"}
-                            type={textTypes.medium} classes={[styles.unlock_block_text]} />
-                    </div>
-                    <Btn type="link" action="https://web.stels.app/" text={"get access"}
-                        classes={[styles.unlock_block_btn]} />
+                    <Fade>
+                        <div>
+                            <Text
+                                data={"Unlock the full potential"}
+                                type={textTypes.BlockTitle} />
+                            <Text text={"of Stels software and access an expansive suite of AI automation systems"}
+                                type={textTypes.medium} classes={[styles.unlock_block_text]} />
+                        </div>
+                        <Btn type="link" action="https://web.stels.app/" text={"get access"}
+                            classes={[styles.unlock_block_btn]} />
+                    </Fade>
                 </div>
             </section>
 
