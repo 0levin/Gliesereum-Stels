@@ -170,7 +170,7 @@
 .info_s__content_img {
     margin-bottom: 24px;
     width: 100%;
-    height: 420px;
+    height: auto;
 }
 
 .info_s__content_title {

@@ -13,8 +13,8 @@ import classNames from "classnames";
 import arrowIcon from "../../assets/selected-indicator.svg";
 //import videoHeader from "./assets/vid18.mp4"
 
-import info2Icon1 from "./assets/illustration-logo.png";
-import info2Icon2 from "./assets/illustration-graph.png";
+import illustrationBots from "./assets/illustration-logo.png";
+import illustrationGraph from "./assets/illustration-graph.png";
 import walletIcon from "./assets/wallet.svg";
 import atomIcon from "./assets/003-atom.svg";
 import netIcon from "./assets/net.svg";
@@ -236,7 +236,7 @@ export const Home = () => {
                 </div>
                 <div className={styles.info_s__content}>
                     <div className={styles.info_s__content_item}>
-                        <img src={info2Icon1} alt="icon" className={styles.info_s__content_img} />
+                        <img src={illustrationBots} alt="icon" className={styles.info_s__content_img} />
                         <Fade top>
                             <Text text={"12 specialized bots"} type={textTypes.TextTitle}
                                 classes={[styles.info_s__content_title]} />
@@ -247,7 +247,7 @@ export const Home = () => {
                         </Fade>
                     </div>
                         <div>
-                            <img src={info2Icon2} alt="icon" className={styles.info_s__content_img} />
+                            <img src={illustrationGraph} alt="icon" className={styles.info_s__content_img} />
                             <Fade top>
                                 <Text text={"Neuronic control module"} type={textTypes.TextTitle}
                                     classes={[styles.info_s__content_title]} />
