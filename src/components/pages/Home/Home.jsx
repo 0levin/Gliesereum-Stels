@@ -32,6 +32,8 @@ import strategyIcon from "./assets/strategy.svg";
 import botIcon from "./assets/bot.svg";
 import withdrawalIcon from "./assets/withdrawal.svg";
 
+import Fade from 'react-reveal/Fade';
+
 const solutions = [
     {
         id: 1,
@@ -127,19 +129,21 @@ export const Home = () => {
                 </video> */}
             </div>
             <section className={classNames([styles.intro])}>
-                <div className={styles.intro__title}>
-                    {/* <img src={blur} alt="blur" className={classNames([styles.intro_blur])} /> */}
-                    <div className={styles.intro__text_row}>
-                        <Text data={"[ STELS ]"} type={textTypes.PageTitle} />
-                        {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
+                <Fade top>
+                    <div className={styles.intro__title}>
+                        {/* <img src={blur} alt="blur" className={classNames([styles.intro_blur])} /> */}
+                        <div className={styles.intro__text_row}>
+                                <Text data={"[ STELS ]"} type={textTypes.PageTitle} />
+                                {/*<img src={starsIcon} alt="icon" className={classNames([styles.intro_stars])}/>*/}
+                        </div>
+                        <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle} />
                     </div>
-                    <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle} />
-                </div>
-                <Text
-                    data={"By Gliesereum"}
-                    classes={[styles.intro__subtext]}
-                />
-                <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
+                    <Text
+                        data={"By Gliesereum"}
+                        classes={[styles.intro__subtext]}
+                    />
+                    <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
+                </Fade>
             </section>
             <section className={classNames(["section", styles.info_f])} id={"solutions"} ref={anchors.solutions}>
                 <div>
@@ -235,22 +239,26 @@ export const Home = () => {
                 <div className={styles.info_s__content}>
                     <div className={styles.info_s__content_item}>
                         <img src={info2Icon1} alt="icon" className={styles.info_s__content_img} />
-                        <Text text={"12 specialized bots"} type={textTypes.TextTitle}
-                            classes={[styles.info_s__content_title]} />
-                        <Text
-                            text={"Use ready-to-go setup of bots, that are united into Botboxes - teams of specialized AI-algorithms that are combining efforts to maximize the effieciency and perform the ordered task."}
-                            type={textTypes.regularDark}
-                        />
+                        <Fade top>
+                            <Text text={"12 specialized bots"} type={textTypes.TextTitle}
+                                classes={[styles.info_s__content_title]} />
+                            <Text
+                                text={"Use ready-to-go setup of bots, that are united into Botboxes - teams of specialized AI-algorithms that are combining efforts to maximize the effieciency and perform the ordered task."}
+                                type={textTypes.regularDark}
+                            />
+                        </Fade>
                     </div>
-                    <div>
-                        <img src={info2Icon2} alt="icon" className={styles.info_s__content_img} />
-                        <Text text={"Neuronic control module"} type={textTypes.TextTitle}
-                            classes={[styles.info_s__content_title]} />
-                        <Text
-                            text={"Enhance your ROI and metrics with our neuronic decision-making system, that analyses streaming RAW data from all markets and communicates with all the bots to immediately execute."}
-                            type={textTypes.regularDark}
-                        />
-                    </div>
+                        <div>
+                            <img src={info2Icon2} alt="icon" className={styles.info_s__content_img} />
+                            <Fade top>
+                                <Text text={"Neuronic control module"} type={textTypes.TextTitle}
+                                    classes={[styles.info_s__content_title]} />
+                                <Text
+                                    text={"Enhance your ROI and metrics with our neuronic decision-making system, that analyses streaming RAW data from all markets and communicates with all the bots to immediately execute."}
+                                    type={textTypes.regularDark}
+                                />
+                            </Fade>
+                        </div>
                 </div>
             </section>
             <section className={classNames(["section", styles.ecosystem])} id={"ecosystem"} ref={anchors.ecosystem}>
