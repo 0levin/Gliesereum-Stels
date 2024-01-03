@@ -78,6 +78,11 @@
     justify-content: center;
 }
 
+.logo img {
+    width: 56px;
+    height: 56px;
+}
+
 @media screen and (max-width: 1200px) {
     .header {
         height: 88px;

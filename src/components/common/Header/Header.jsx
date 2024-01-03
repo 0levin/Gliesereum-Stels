@@ -4,7 +4,7 @@ import { Text, textTypes } from '../../shared/Text/Text';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import ghIcon from "../assets/Github_white.svg";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo-stels.svg";
 import menuIcon from "../assets/menu.svg";
 import closeIcon from "../assets/close.svg";
 

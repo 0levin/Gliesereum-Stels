@@ -13,8 +13,8 @@ import classNames from "classnames";
 import arrowIcon from "../../assets/selected-indicator.svg";
 //import videoHeader from "./assets/vid18.mp4"
 
-import info2Icon1 from "./assets/illustration.svg";
-import info2Icon2 from "./assets/illustration_graph.png";
+import info2Icon1 from "./assets/illustration.png";
+import info2Icon2 from "./assets/illustration2.png";
 import walletIcon from "./assets/wallet.svg";
 import atomIcon from "./assets/003-atom.svg";
 import netIcon from "./assets/net.svg";
