@@ -140,8 +140,6 @@ export const Home = () => {
                         <Text classes={['small']} text={"Automated capital and market management"} type={textTypes.PageTitle} />
                     </div>
                     <Text data={"By Gliesereum"} classes={[styles.intro__subtext]}/>
-                </Fade>
-                <Fade bottom>
                     <Btn type="link" action="https://web.stels.app/" text={"Try now"} className={styles.intro__btn} />
                 </Fade>
             </section>
