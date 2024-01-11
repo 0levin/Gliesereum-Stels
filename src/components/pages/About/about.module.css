@@ -14,6 +14,13 @@
 }
 
 @media screen and (min-height: 1440px) {
+    .intro_bg_wrapper {
+        max-height: auto;
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (min-height: 1440px) {
     .bg1 {
         max-height: 100vh;
     }

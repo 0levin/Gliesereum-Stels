@@ -91,6 +91,10 @@ button {
     object-fit: cover;
 }
 
+.animate__animated {
+    opacity: 0;
+}
+
 @media screen and (max-width: 1200px) {
     .section {
         margin-top: 120px;

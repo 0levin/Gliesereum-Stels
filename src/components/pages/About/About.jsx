@@ -7,10 +7,35 @@ import bg2 from "./assets/bg2.svg";
 import logoIcon from "./assets/logo-icon.svg";
 import { Btn } from "../../shared/Btn/Btn";
 
-import Fade from 'react-reveal/Fade';
-import Flip from 'react-reveal/Flip';
+import 'animate.css';
+import { useEffect, useRef } from "react";
+import { useAnimation } from "../../shared/hooks/useAnimation";
 
 export const About = () => {
+
+    // animation
+    const animation = {
+        card: {
+            ref: useRef(),
+            animationClass: "animate__fadeInLeft",
+        },
+        info_title: {
+            ref: useRef(),
+            animationClass: "animate__fadeInRight",
+        },
+        info_image: {
+            ref: useRef(),
+            animationClass: "animate__fadeInLeft",
+        },
+        access: {
+            ref: useRef(),
+            animationClass: "animate__fadeIn",
+        }
+    }
+
+    useAnimation(animation);
+    // animation end
+
     return (
         <div className="container">
             <div className={classNames([styles.intro_bg_wrapper])}>
@@ -19,18 +44,14 @@ export const About = () => {
             <section className={classNames([styles.intro])}>
                 <div className={styles.intro__title}>
                     <div className={styles.intro__text_row}>
-                        <Fade top>
-                            <Text data={"About us"} type={textTypes.PageTitle} />
-                        </Fade>
+                        <Text data={"About us"} type={textTypes.PageTitle} classes={["animate__animated", "animate__fadeInDown"]} />
                     </div>
                 </div>
-                <Fade top>
                     <Text
                         data={"We are Gliesereum, the vanguard of next-generation blockchain technology poised to redefine the contours of digital market management."}
-                        classes={[styles.intro__subtext]} />
-                </Fade>
+                        classes={[styles.intro__subtext, "animate__animated", "animate__fadeInDown"]} />
             </section>
-            <section className={classNames(["section", styles.text_info])}>
+            <section data-animation-id={"card"} ref={animation.card.ref} className={classNames(["section", styles.text_info, "animate__animated"])}>
                 <img src={logoIcon} alt="logo" className={styles.text_info_logo} />
                 <div>
                     <Text
@@ -46,7 +67,7 @@ export const About = () => {
                 />
             </section>
             <section className={classNames(["section", styles.img_info])}>
-                <div className="block_title">
+                <div data-animation-id={"info_title"} ref={animation.info_title.ref} className={classNames(["block_title", "animate__animated"])}>
                     <Text
                         data={"Stels by Gliesereum"}
                         type={textTypes.BlockTitle}
@@ -57,7 +78,7 @@ export const About = () => {
                         classes={[styles.img_info__title_text]}
                     />
                 </div>
-                <div className={classNames([styles.img_info__photo])}>
+                <div data-animation-id={"info_image"} ref={animation.info_image.ref} className={classNames([styles.img_info__photo, "animate__animated"])}>
                     <img src={img} alt="" className={classNames(["image"])} />
                     {/* <div className={classNames([styles.img_info__card])} >
                         <img src={fileIcon} alt="" />
@@ -76,21 +97,19 @@ export const About = () => {
                 <div className={styles.bg2}>
                     <img src={bg2} alt="bg" />
                 </div>
-                <Fade>
-                    <div className={styles.last_text_block_content}>
-                        <div>
-                            <Text data={"Ready to experience the future?"}
-                                type={textTypes.BlockTitle}
-                            />
-                            <Text text={"Become a part of the Gliesereum community. Explore our products, engage with our team, and witness the future of market management and yield generation."}
-                                classes={[styles.text_info_re]}
-                                type={textTypes.medium}
-                            />
-                        </div>
-                        <Btn text={"get access"} type="link" action="https://web.stels.app/"
-                            classes={[styles.last_text_block_btn]} />
+                <div data-animation-id={"access"} ref={animation.access.ref} className={classNames([styles.last_text_block_content, "animate__animated"])} >
+                    <div>
+                        <Text data={"Ready to experience the future?"}
+                            type={textTypes.BlockTitle}
+                        />
+                        <Text text={"Become a part of the Gliesereum community. Explore our products, engage with our team, and witness the future of market management and yield generation."}
+                            classes={[styles.text_info_re]}
+                            type={textTypes.medium}
+                        />
                     </div>
-                </Fade>
+                    <Btn text={"get access"} type="link" action="https://web.stels.app/"
+                        classes={[styles.last_text_block_btn]} />
+                </div>
             </section>
         </div>
     )
