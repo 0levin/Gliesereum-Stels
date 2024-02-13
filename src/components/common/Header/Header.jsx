@@ -90,6 +90,11 @@ export const Header = () => {
                             </a>
                         </li>
                         <li className={classNames([styles.nav_link_y, "hover"])}>
+                            <a href="/#partners">
+                                <Text text={"Partners"} type={textTypes.regularDark} />
+                            </a>
+                        </li>
+                        <li className={classNames([styles.nav_link_y, "hover"])}>
                             <a href="/#faq">
                                 <Text text={"FAQ"} type={textTypes.regularDark} />
                             </a>

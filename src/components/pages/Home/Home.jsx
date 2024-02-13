@@ -5,6 +5,10 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaqItem } from "./FaqItem/FaqItem";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import starsIcon from "../assets/stars-icon.svg";
 import bg from "../assets/bg-1.png";
 import bg3Blur from "./assets/bg-3.png";
@@ -31,6 +35,13 @@ import dataIcon from "./assets/data.svg";
 import strategyIcon from "./assets/strategy.svg";
 import botIcon from "./assets/bot.svg";
 import withdrawalIcon from "./assets/withdrawal.svg";
+
+import logoMagic from "./assets/logo-magic.png";
+import logoCoinbase from "./assets/logo-coinbase.png";
+import logoBinance from "./assets/logo-binance.png";
+import logoOkx from "./assets/logo-okx.png";
+import logoBybit from "./assets/logo-bybit.png";
+import logoHtx from "./assets/logo-htx.png";
 
 import 'animate.css';
 import { useAnimation } from "../../shared/hooks/useAnimation";
@@ -100,6 +111,7 @@ export const Home = () => {
         ecosystem: useRef(),
         media: useRef(),
         faq: useRef(),
+        partners: useRef(),
     }
 
     const { hash } = useLocation();
@@ -119,6 +131,24 @@ export const Home = () => {
             window.innerWidth - 160
         :
         400
+    
+    var settings = {
+        slidesToShow: 6,
+        slidesToScroll: -1,
+        speed: 2000,
+        autoplaySpeed: 4000,
+        dots: false,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: -3,
+            }
+        }],
+    };
 
     // animation
     const animation = {
@@ -440,6 +470,20 @@ export const Home = () => {
                         </a>
                     </div>
                 </div>
+            </section>
+
+            <section className="section" id={"partners"} ref={anchors.partners}>
+            <div className="block_title">
+                <Text data={"Partners"} type={textTypes.BlockTitle} />
+                </div>
+                <Slider className={classNames([styles.slider])} {...settings}>
+                    <img src={logoMagic} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoCoinbase} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoBinance} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoOkx} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoBybit} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoHtx} alt="" className={classNames([styles.partners_logo])} />
+                </Slider>
             </section>
 
             <section className="section" id={"faq"} ref={anchors.faq}>

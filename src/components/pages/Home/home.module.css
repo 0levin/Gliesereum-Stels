@@ -6,7 +6,7 @@
     overflow: hidden;
     width: 100vw;
     max-width: 4500px;
-    background-color: #171717
+    background-color: #000000
 }
 
 .intro_bg_wrapper img {
@@ -455,6 +455,12 @@
     .info_f__list_item {
         gap: 24px;
     }
+
+    .partners_logo {
+        width: auto;
+        height: 200px;
+        padding: 20px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -462,3 +468,15 @@
         margin-top: 250px;
     }
 }
+
+.slider {
+    width: auto;
+}
+
+.partners_logo {
+    width: auto;
+    height: 80px;
+    object-fit: scale-down;
+    padding: 20px;
+}
+

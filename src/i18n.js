@@ -22,6 +22,7 @@ const resources = {
             "Press about us": JSON.stringify([{ text: "Press " }, { text: "about us", accent: true }]),
             "read the article": JSON.stringify([{ text: "read the article", accent: true, }]),
             "By Gliesereum": JSON.stringify([{ text: "By " }, { text: "Gliesereum", accent: true }]),
+            "Partners": JSON.stringify([{ text: "Partners", accent: true }]),
 
         }
     },
