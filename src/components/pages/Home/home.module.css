@@ -458,8 +458,10 @@
 
     .partners_logo {
         width: auto;
-        height: 200px;
-        padding: 20px;
+        height: 60px;
+        padding: 16px;
+        padding-top: 0;
+        object-fit: scale-down;
     }
 }
 
@@ -467,16 +469,16 @@
     .intro {
         margin-top: 250px;
     }
-}
 
-.slider {
-    width: auto;
-}
-
-.partners_logo {
-    width: auto;
-    height: 80px;
-    object-fit: scale-down;
-    padding: 20px;
+    .slider {
+        width: auto;
+    }
+    
+    .partners_logo {
+        width: auto;
+        height: 80px;
+        object-fit: scale-down;
+        padding: 20px;
+    }
 }
 

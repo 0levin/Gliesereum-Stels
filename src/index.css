@@ -109,6 +109,10 @@ button {
     .container {
         padding: 0 20px;
     }
+
+    .block_title_partners {
+        margin-bottom: 32px !important;
+    }
 }
 
 @keyframes gradient-animation {

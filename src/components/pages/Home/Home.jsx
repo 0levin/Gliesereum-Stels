@@ -42,6 +42,14 @@ import logoBinance from "./assets/logo-binance.png";
 import logoOkx from "./assets/logo-okx.png";
 import logoBybit from "./assets/logo-bybit.png";
 import logoHtx from "./assets/logo-htx.png";
+import logoBitok from "./assets/logo-bitok.png";
+import logoSolana from "./assets/logo-solana.png";
+import logoTrust from "./assets/logo-trust.png";
+import logoDeribit from "./assets/logo-deribit.png";
+import logoListinghelp from "./assets/logo-listinghelp.png";
+import logoKucoin from "./assets/logo-kucoin.png";
+import logoAtas from "./assets/logo-atas.png";
+import logoGateio from "./assets/logo-gateio.png";
 
 import 'animate.css';
 import { useAnimation } from "../../shared/hooks/useAnimation";
@@ -136,16 +144,18 @@ export const Home = () => {
         slidesToShow: 6,
         slidesToScroll: -1,
         speed: 2000,
-        autoplaySpeed: 4000,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
         dots: false,
         arrows: false,
-        infinite: true,
-        autoplay: true,
+        //cssEase: 'linear',
+        //variableWidth: true,
         responsive: [{
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: -3,
+                slidesToScroll: -1,
             }
         }],
     };
@@ -295,8 +305,30 @@ export const Home = () => {
                         </div>
                     </div>
                 }
-
             </section>
+
+            <section className="section" id={"partners"} ref={anchors.partners}>
+                <div className={classNames(["block_title", "block_title_partners"])}>
+                    <Text data={"Partners "} type={textTypes.BlockTitle} />
+                </div>
+                <Slider className={classNames([styles.slider])} {...settings}>
+                    <img src={logoMagic} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoCoinbase} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoBinance} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoBybit} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoHtx} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoOkx} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoSolana} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoTrust} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoBitok} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoDeribit} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoListinghelp} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoKucoin} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoAtas} alt="" className={classNames([styles.partners_logo])} />
+                    <img src={logoGateio} alt="" className={classNames([styles.partners_logo])} />
+                </Slider>
+            </section>
+
             <section className={classNames(["section"])} id={"ai_systems"} ref={anchors.ai_systems}>
                 <div className="block_title">
                     <Text
@@ -336,6 +368,7 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
+
             <section className={classNames(["section", styles.ecosystem])} id={"ecosystem"} ref={anchors.ecosystem}>
                 <div className={styles.bg2}>
                     <img src={bg2Blur} alt="bg" />
@@ -472,23 +505,9 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="section" id={"partners"} ref={anchors.partners}>
-            <div className="block_title">
-                <Text data={"Partners"} type={textTypes.BlockTitle} />
-                </div>
-                <Slider className={classNames([styles.slider])} {...settings}>
-                    <img src={logoMagic} alt="" className={classNames([styles.partners_logo])} />
-                    <img src={logoCoinbase} alt="" className={classNames([styles.partners_logo])} />
-                    <img src={logoBinance} alt="" className={classNames([styles.partners_logo])} />
-                    <img src={logoOkx} alt="" className={classNames([styles.partners_logo])} />
-                    <img src={logoBybit} alt="" className={classNames([styles.partners_logo])} />
-                    <img src={logoHtx} alt="" className={classNames([styles.partners_logo])} />
-                </Slider>
-            </section>
-
             <section className="section" id={"faq"} ref={anchors.faq}>
                 <div className="block_title">
-                    <Text text={"FAQ"} type={textTypes.BlockTitle} />
+                    <Text data={"FAQ "} type={textTypes.BlockTitle} />
                 </div>
                 <div className={classNames([styles.faq__content])}>
                     <div data-animation-id={"faq"} ref={animation.faq.refs[0]} className={"animate__animated"}>

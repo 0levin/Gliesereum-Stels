@@ -75,6 +75,11 @@ export const Header = () => {
                             </a>
                         </li>
                         <li className={classNames([styles.nav_link_y, "hover"])}>
+                            <a href="/#partners">
+                                <Text text={"Partners"} type={textTypes.regularDark} />
+                            </a>
+                        </li>
+                        <li className={classNames([styles.nav_link_y, "hover"])}>
                             <a href="/#ai_systems">
                                 <Text text={"AI-systems"} type={textTypes.regularDark} />
                             </a>
@@ -87,11 +92,6 @@ export const Header = () => {
                         <li className={classNames([styles.nav_link_y, "hover"])}>
                             <a href="/#media">
                                 <Text text={"Media"} type={textTypes.regularDark} />
-                            </a>
-                        </li>
-                        <li className={classNames([styles.nav_link_y, "hover"])}>
-                            <a href="/#partners">
-                                <Text text={"Partners"} type={textTypes.regularDark} />
                             </a>
                         </li>
                         <li className={classNames([styles.nav_link_y, "hover"])}>
